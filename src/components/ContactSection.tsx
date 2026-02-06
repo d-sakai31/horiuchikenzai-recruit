@@ -16,7 +16,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-white py-20 md:py-28">
+    <section id="contact" className="bg-bg-pale py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-4">
         <div className="text-center">
           <span className="section-label">Contact</span>
@@ -31,8 +31,8 @@ export default function ContactSection() {
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Form */}
-          <div className="bg-bg-section rounded-2xl p-6 md:p-8">
-            <h3 className="text-lg font-bold text-text-main mb-1">
+          <div className="bg-white rounded-2xl p-6 md:p-8 border border-sub/30">
+            <h3 className="text-lg font-bold text-primary mb-1">
               Webフォームで問い合わせ
             </h3>
             <p className="text-xs text-text-sub mb-6">
@@ -41,8 +41,8 @@ export default function ContactSection() {
 
             {formState === "sent" ? (
               <div className="text-center py-8">
-                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 text-xl">&#10003;</div>
-                <p className="font-bold text-text-main">送信しました</p>
+                <div className="w-12 h-12 rounded-full bg-sub text-primary flex items-center justify-center mx-auto mb-3 text-xl font-bold">&#10003;</div>
+                <p className="font-bold text-primary">送信しました</p>
                 <p className="text-sm text-text-sub mt-2">
                   ※これはデモ送信です。本番環境ではフォームサービスに接続してください。
                 </p>
@@ -50,7 +50,7 @@ export default function ContactSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="contact-name" className="block text-sm font-medium text-text-main mb-1">
+                  <label htmlFor="contact-name" className="block text-sm font-medium text-primary mb-1">
                     お名前 <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -59,12 +59,12 @@ export default function ContactSection() {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    className="w-full bg-white border border-sub/40 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sub/40 focus:border-sub"
                     placeholder="堀内 太郎"
                   />
                 </div>
                 <div>
-                  <label htmlFor="contact-email" className="block text-sm font-medium text-text-main mb-1">
+                  <label htmlFor="contact-email" className="block text-sm font-medium text-primary mb-1">
                     メールアドレス <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -73,12 +73,12 @@ export default function ContactSection() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    className="w-full bg-white border border-sub/40 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sub/40 focus:border-sub"
                     placeholder="example@email.com"
                   />
                 </div>
                 <div>
-                  <label htmlFor="contact-message" className="block text-sm font-medium text-text-main mb-1">
+                  <label htmlFor="contact-message" className="block text-sm font-medium text-primary mb-1">
                     メッセージ
                   </label>
                   <textarea
@@ -86,7 +86,7 @@ export default function ContactSection() {
                     rows={4}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary resize-y"
+                    className="w-full bg-white border border-sub/40 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sub/40 focus:border-sub resize-y"
                     placeholder="気になっていること、聞きたいことなど自由にご記入ください。「まだ応募は決めていないが話を聞きたい」でもOKです。"
                   />
                 </div>
@@ -102,8 +102,8 @@ export default function ContactSection() {
 
           {/* Other contact methods */}
           <div className="space-y-6">
-            <div className="bg-bg-section rounded-2xl p-6">
-              <h3 className="text-base font-bold text-text-main">
+            <div className="bg-white rounded-2xl p-6 border border-sub/30">
+              <h3 className="text-base font-bold text-primary">
                 メールで直接問い合わせ
               </h3>
               <p className="text-xs text-text-sub mt-1">
@@ -111,14 +111,14 @@ export default function ContactSection() {
               </p>
               <a
                 href={`mailto:${COMPANY.contactEmail}`}
-                className="mt-3 inline-block text-primary hover:underline text-sm font-medium break-all"
+                className="mt-3 inline-block text-primary-light hover:text-primary hover:underline text-sm font-medium break-all"
               >
                 {COMPANY.contactEmail}
               </a>
             </div>
 
-            <div className="bg-bg-section rounded-2xl p-6">
-              <h3 className="text-base font-bold text-text-main">
+            <div className="bg-white rounded-2xl p-6 border border-sub/30">
+              <h3 className="text-base font-bold text-primary">
                 電話で問い合わせ
               </h3>
               <p className="text-xs text-text-sub mt-1">
@@ -132,7 +132,7 @@ export default function ContactSection() {
               </a>
             </div>
 
-            <div className="rounded-2xl p-6 border-2 border-accent/30 bg-accent/5">
+            <div className="rounded-2xl p-6 bg-white border-2 border-accent/40">
               <h3 className="text-base font-bold text-primary">
                 「応募前相談」も歓迎です
               </h3>

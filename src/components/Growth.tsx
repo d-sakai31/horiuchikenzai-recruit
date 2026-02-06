@@ -2,7 +2,7 @@ import { GROWTH } from "@/data/company";
 
 export default function Growth() {
   return (
-    <section id="growth" className="bg-bg-section py-20 md:py-28">
+    <section id="growth" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
           <span className="section-label">Growth</span>
@@ -17,15 +17,17 @@ export default function Growth() {
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* New building image */}
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 order-2 lg:order-1">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={GROWTH.image}
-              alt="新社屋の外観（後日差し替え）"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute -top-2 -left-2 w-14 h-14 border-2 border-accent/30 rounded-xl -z-10" aria-hidden="true" />
+          <div className="relative order-2 lg:order-1">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-bg-pale border border-sub/30">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={GROWTH.image}
+                alt="新社屋の外観（後日差し替え）"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="absolute -top-2 -left-2 w-14 h-14 border-2 border-sub/40 rounded-xl -z-10" aria-hidden="true" />
           </div>
 
           {/* Points */}
@@ -33,7 +35,7 @@ export default function Growth() {
             {GROWTH.points.map((point) => (
               <div
                 key={point.title}
-                className="bg-white rounded-2xl p-5 border border-gray-200"
+                className="bg-bg-pale rounded-2xl p-5 border border-sub/30"
               >
                 <h3 className="text-base font-bold text-primary leading-snug flex items-start gap-2">
                   <span className="w-1.5 h-5 bg-accent rounded-full shrink-0 mt-0.5" aria-hidden="true" />

@@ -31,7 +31,7 @@ export default function Hero() {
 
         {/* Image */}
         <div className="order-1 lg:order-2 relative">
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-bg-section">
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-bg-pale border border-sub/30">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={HERO.bgImage}
@@ -39,11 +39,14 @@ export default function Hero() {
               className="w-full h-full object-cover"
             />
           </div>
-          {/* Decorative accent */}
-          <div className="absolute -bottom-3 -left-3 w-20 h-20 bg-accent/20 rounded-xl -z-10" aria-hidden="true" />
-          <div className="absolute -top-3 -right-3 w-16 h-16 border-2 border-line-art/40 rounded-xl -z-10" aria-hidden="true" />
+          {/* SUBカラーの装飾 */}
+          <div className="absolute -bottom-3 -left-3 w-20 h-20 bg-sub/25 rounded-xl -z-10" aria-hidden="true" />
+          <div className="absolute -top-3 -right-3 w-16 h-16 border-2 border-sub/50 rounded-xl -z-10" aria-hidden="true" />
         </div>
       </div>
+
+      {/* SUBカラーの区切りライン */}
+      <div className="h-px bg-gradient-to-r from-transparent via-sub to-transparent" aria-hidden="true" />
     </section>
   );
 }

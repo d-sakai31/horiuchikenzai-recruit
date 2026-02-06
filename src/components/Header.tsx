@@ -17,10 +17,9 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-sub/30">
       <div className="mx-auto max-w-6xl flex items-center justify-between px-4 h-14">
         <a href="#" className="flex items-center gap-2">
-          {/* Logo mark — 黄色バー + ティールの組み合わせ（HP準拠） */}
           <span className="flex flex-col gap-0.5" aria-hidden="true">
             <span className="block w-5 h-0.5 bg-accent rounded-full" />
             <span className="block w-4 h-0.5 bg-accent rounded-full" />
@@ -87,14 +86,14 @@ export default function Header() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <nav className="lg:hidden border-t border-gray-100 bg-white" aria-label="モバイルナビゲーション">
+        <nav className="lg:hidden border-t border-sub/20 bg-white" aria-label="モバイルナビゲーション">
           <ul className="py-2">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 text-sm text-text-sub hover:bg-bg-section hover:text-primary transition-colors"
+                  className="block px-4 py-3 text-sm text-text-sub hover:bg-bg-pale hover:text-primary transition-colors"
                 >
                   {item.label}
                 </a>

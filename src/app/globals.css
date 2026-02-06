@@ -1,18 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  /* HP準拠カラー */
-  --color-primary: #00374c;
-  --color-primary-light: #1a5a72;
-  --color-primary-dark: #00212e;
-  --color-accent: #fac000;
-  --color-accent-light: #ffd033;
-  --color-accent-dark: #d4a300;
-  --color-line-art: #7ec8d8;
-  --color-bg-warm: #faf9f6;
-  --color-bg-section: #f5f7f8;
-  --color-text-main: #222222;
-  --color-text-sub: #5a6472;
+  /* ──────────────────────────────────────────
+     カラーシステム（指定カラーコード準拠）
+     MAIN  : #002D46  ネイビー
+     SUB   : #A8D6ED  ライトブルー
+     ACCENT: #F3C138  イエロー
+     BASE  : #FFFFFF / #F0F8FD
+     ────────────────────────────────────────── */
+
+  /* MAIN — 見出し・本文・ダーク背景 */
+  --color-primary: #002D46;
+  --color-primary-light: #0e4563;
+  --color-primary-dark: #001a2b;
+
+  /* SUB — 装飾・カードボーダー・サブ背景 */
+  --color-sub: #A8D6ED;
+  --color-sub-light: #c8e6f4;
+  --color-sub-dark: #7bbdd9;
+
+  /* ACCENT — CTA・ハイライト・アクセントライン */
+  --color-accent: #F3C138;
+  --color-accent-light: #f5cf5e;
+  --color-accent-dark: #d4a520;
+
+  /* BASE — 背景 */
+  --color-bg-white: #FFFFFF;
+  --color-bg-pale: #F0F8FD;
+
+  /* TEXT */
+  --color-text-main: #002D46;
+  --color-text-sub: #4a6274;
+
   --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
@@ -25,21 +44,21 @@ body {
   color: var(--color-text-main);
   font-family: var(--font-sans);
   line-height: 1.8;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
-/* HP風の英語セクションラベル */
+/* セクション英語ラベル */
 .section-label {
   display: block;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-sub-dark);
   margin-bottom: 0.5rem;
 }
 
-/* HP風のアクセント装飾ライン */
+/* アクセント装飾ライン */
 .accent-line {
   width: 2.5rem;
   height: 3px;

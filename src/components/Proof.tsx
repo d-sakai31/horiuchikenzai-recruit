@@ -2,7 +2,7 @@ import { PROOF_CARDS } from "@/data/company";
 
 export default function Proof() {
   return (
-    <section id="proof" className="bg-white py-20 md:py-28">
+    <section id="proof" className="bg-bg-pale py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
           <span className="section-label">Evidence</span>
@@ -19,7 +19,7 @@ export default function Proof() {
           {PROOF_CARDS.map((card) => (
             <div
               key={card.label}
-              className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-md transition-shadow"
+              className="bg-white border border-sub/30 rounded-2xl p-6 text-center hover:shadow-md hover:border-sub transition-all"
             >
               <div className="text-4xl md:text-5xl font-extrabold text-primary leading-none">
                 {card.number}
@@ -28,7 +28,7 @@ export default function Proof() {
               <div className="mt-2 text-sm text-text-sub font-medium">
                 {card.unit}
               </div>
-              <div className="mt-3 text-base font-bold text-text-main">
+              <div className="mt-3 text-base font-bold text-primary">
                 {card.label}
               </div>
               {card.note && (

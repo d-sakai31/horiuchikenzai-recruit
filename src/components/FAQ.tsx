@@ -7,19 +7,19 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-200">
+    <div className="border-b border-sub/20 last:border-b-0">
       <button
         type="button"
         className="w-full flex items-center justify-between py-5 text-left group"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
-        <span className="text-sm md:text-base font-medium text-text-main pr-4 group-hover:text-primary transition-colors">
+        <span className="text-sm md:text-base font-medium text-primary pr-4 group-hover:text-primary-light transition-colors">
           {item.question}
         </span>
         <span
           className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${
-            isOpen ? "bg-primary text-white rotate-45" : "bg-bg-section text-text-sub"
+            isOpen ? "bg-primary text-white rotate-45" : "bg-sub/30 text-primary"
           }`}
           aria-hidden="true"
         >
@@ -41,7 +41,7 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-bg-section py-20 md:py-28">
+    <section id="faq" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-2xl px-4">
         <div className="text-center">
           <span className="section-label">FAQ</span>
@@ -54,7 +54,7 @@ export default function FAQ() {
           </p>
         </div>
 
-        <div className="mt-10 bg-white rounded-2xl border border-gray-200 px-6">
+        <div className="mt-10 bg-bg-pale rounded-2xl border border-sub/30 px-6">
           {FAQ_ITEMS.map((item) => (
             <FAQAccordionItem key={item.question} item={item} />
           ))}

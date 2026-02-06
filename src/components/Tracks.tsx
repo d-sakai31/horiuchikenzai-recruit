@@ -12,16 +12,16 @@ function TrackCard({ heading, subHeading, points, note, variant }: TrackCardProp
   const isMid = variant === "mid";
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-2xl border border-sub/30 overflow-hidden hover:shadow-md transition-shadow">
       <div className={`${isMid ? "bg-accent" : "bg-primary"} ${isMid ? "text-primary-dark" : "text-white"} px-6 py-5`}>
         <h3 className="text-xl font-bold">{heading}</h3>
-        <p className={`text-sm mt-1 ${isMid ? "text-primary-dark/60" : "text-white/70"}`}>{subHeading}</p>
+        <p className={`text-sm mt-1 ${isMid ? "text-primary-dark/60" : "text-sub-light"}`}>{subHeading}</p>
       </div>
       <div className="p-6 space-y-5">
         {points.map((point) => (
           <div key={point.title}>
-            <h4 className="text-base font-bold text-text-main flex items-start gap-2">
-              <span className={`w-1.5 h-5 ${isMid ? "bg-accent" : "bg-primary-light"} rounded-full shrink-0 mt-0.5`} aria-hidden="true" />
+            <h4 className="text-base font-bold text-primary flex items-start gap-2">
+              <span className={`w-1.5 h-5 ${isMid ? "bg-accent" : "bg-sub"} rounded-full shrink-0 mt-0.5`} aria-hidden="true" />
               {point.title}
             </h4>
             <p className="mt-1 text-sm text-text-sub leading-relaxed pl-4">
@@ -30,7 +30,7 @@ function TrackCard({ heading, subHeading, points, note, variant }: TrackCardProp
           </div>
         ))}
         {note && (
-          <p className="text-xs text-text-sub border-t border-gray-100 pt-4 mt-4">
+          <p className="text-xs text-text-sub border-t border-sub/20 pt-4 mt-4">
             {note}
           </p>
         )}
@@ -41,7 +41,7 @@ function TrackCard({ heading, subHeading, points, note, variant }: TrackCardProp
 
 export default function Tracks() {
   return (
-    <section id="tracks" className="bg-white py-20 md:py-28">
+    <section id="tracks" className="bg-bg-pale py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
           <span className="section-label">Careers</span>

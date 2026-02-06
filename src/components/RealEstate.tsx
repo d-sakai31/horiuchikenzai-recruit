@@ -5,14 +5,14 @@ export default function RealEstate() {
     <section id="realestate" className="bg-primary text-white py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-4">
         <div className="text-center">
-          <span className="text-xs font-bold tracking-[0.15em] uppercase text-accent">
+          <span className="text-xs font-bold tracking-[0.15em] uppercase text-sub">
             Real Estate
           </span>
           <h2 className="mt-2 text-2xl md:text-3xl font-bold">
             {REAL_ESTATE.heading}
           </h2>
           <div className="mx-auto mt-3 w-10 h-0.5 bg-accent rounded-full" aria-hidden="true" />
-          <p className="mt-4 text-white/60 text-sm md:text-base">
+          <p className="mt-4 text-sub-light text-sm md:text-base">
             {REAL_ESTATE.subHeading}
           </p>
         </div>

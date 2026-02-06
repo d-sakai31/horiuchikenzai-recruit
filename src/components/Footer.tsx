@@ -19,7 +19,7 @@ export default function Footer() {
           <dl className="space-y-2">
             {FOOTER.companyInfo.map((item) => (
               <div key={item.label} className="flex gap-3 text-sm">
-                <dt className="shrink-0 text-white/50 w-16">{item.label}</dt>
+                <dt className="shrink-0 text-sub/70 w-16">{item.label}</dt>
                 <dd className="text-white/80">{item.value}</dd>
               </div>
             ))}
@@ -27,7 +27,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <p className="font-bold text-sm text-white/50 uppercase tracking-wider mb-4">Links</p>
+            <p className="font-bold text-sm text-sub/70 uppercase tracking-wider mb-4">Links</p>
             <ul className="space-y-2">
               {FOOTER.links.map((link) => (
                 <li key={link.label}>
@@ -35,7 +35,7 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-white/70 hover:text-accent transition-colors"
+                    className="text-sm text-sub-light hover:text-accent transition-colors"
                   >
                     {link.label}
                   </a>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/10 text-center text-xs text-white/30">
+        <div className="mt-12 pt-6 border-t border-sub/15 text-center text-xs text-sub/50">
           &copy; {new Date().getFullYear()} {COMPANY.name}. All rights reserved.
         </div>
       </div>
