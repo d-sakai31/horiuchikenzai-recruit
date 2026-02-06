@@ -11,27 +11,29 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // ダミー送信 — 本番では Formspree 等に差し替え
     setFormState("sent");
   };
 
   return (
-    <section id="contact" className="bg-bg-pale/60 py-20 md:py-28">
+    <section
+     
+      id="contact"
+      className="bg-white pt-20 md:pt-28 pb-24 md:pb-36"
+    >
       <div className="mx-auto max-w-4xl px-4">
+        {/* Header: display centered */}
         <div className="text-center">
-          <span className="section-label">Contact</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-primary whitespace-pre-line">
+          <h2 className="text-display text-primary whitespace-pre-line">
             {CTA.heading}
           </h2>
-          <div className="accent-line" aria-hidden="true" />
-          <p className="mt-4 text-text-sub text-sm md:text-base whitespace-pre-line max-w-md mx-auto">
+          <p className="mt-4 text-text-sub text-base whitespace-pre-line max-w-md mx-auto">
             {CTA.subHeading}
           </p>
         </div>
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Form */}
-          <div className="bg-white rounded-2xl p-6 md:p-8 border border-sub/30">
+          {/* Form: accent top border */}
+          <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg border-t-4 border-accent">
             <h3 className="text-lg font-bold text-primary mb-1">
               Webフォームで問い合わせ
             </h3>
@@ -106,39 +108,48 @@ export default function ContactSection() {
             )}
           </div>
 
-          {/* Other contact methods */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-6 border border-sub/30">
-              <h3 className="text-base font-bold text-primary">
-                メールで直接問い合わせ
-              </h3>
-              <p className="text-xs text-text-sub mt-1">
-                直接メールを送りたい方はこちら。
-              </p>
-              <a
-                href={`mailto:${COMPANY.contactEmail}`}
-                className="mt-3 inline-block text-primary-light hover:text-primary hover:underline text-sm font-medium break-all"
-              >
-                {COMPANY.contactEmail}
-              </a>
+          {/* Contact methods: flat list */}
+          <div className="space-y-0">
+            {/* Email */}
+            <div className="flex items-start gap-4 py-5 border-b border-sub/20">
+              <span className="w-10 h-10 rounded-lg bg-sub/10 flex items-center justify-center shrink-0">
+                <svg className="w-5 h-5 text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </span>
+              <div>
+                <h3 className="font-bold text-primary text-sm">メールで直接問い合わせ</h3>
+                <p className="text-xs text-text-sub mt-0.5">直接メールを送りたい方はこちら。</p>
+                <a
+                  href={`mailto:${COMPANY.contactEmail}`}
+                  className="text-primary-light hover:text-primary hover:underline text-sm mt-1 inline-block break-all"
+                >
+                  {COMPANY.contactEmail}
+                </a>
+              </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-sub/30">
-              <h3 className="text-base font-bold text-primary">
-                電話で問い合わせ
-              </h3>
-              <p className="text-xs text-text-sub mt-1">
-                平日 9:00〜17:00（担当：採用窓口）
-              </p>
-              <a
-                href={`tel:${COMPANY.contactPhone.replace(/-/g, "")}`}
-                className="mt-3 inline-block text-primary hover:underline text-lg font-bold"
-              >
-                {COMPANY.contactPhone}
-              </a>
+            {/* Phone */}
+            <div className="flex items-start gap-4 py-5 border-b border-sub/20">
+              <span className="w-10 h-10 rounded-lg bg-sub/10 flex items-center justify-center shrink-0">
+                <svg className="w-5 h-5 text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </span>
+              <div>
+                <h3 className="font-bold text-primary text-sm">電話で問い合わせ</h3>
+                <p className="text-xs text-text-sub mt-0.5">平日 9:00〜17:00（担当：採用窓口）</p>
+                <a
+                  href={`tel:${COMPANY.contactPhone.replace(/-/g, "")}`}
+                  className="text-primary hover:underline text-lg font-bold mt-1 inline-block"
+                >
+                  {COMPANY.contactPhone}
+                </a>
+              </div>
             </div>
 
-            <div className="rounded-2xl p-6 bg-white border-2 border-accent/40">
+            {/* Pre-application consultation */}
+            <div className="mt-6 rounded-xl p-6 bg-accent/10 border border-accent/30">
               <h3 className="text-base font-bold text-primary">
                 「応募前相談」も歓迎です
               </h3>

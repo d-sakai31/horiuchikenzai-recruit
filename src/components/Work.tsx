@@ -1,22 +1,30 @@
+
 import { WORK } from "@/data/company";
 
 export default function Work() {
+
   return (
-    <section id="work" className="bg-white/70 py-20 md:py-28">
+    <section
+     
+      id="work"
+      className="bg-bg-pale/40 py-16 md:py-24"
+    >
       <div className="mx-auto max-w-6xl px-4">
-        <div className="text-center">
-          <span className="section-label">Work</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-primary">
-            {WORK.heading}
-          </h2>
-          <div className="accent-line" aria-hidden="true" />
-          <p className="mt-4 text-text-sub text-sm md:text-base max-w-xl mx-auto">
+        {/* Header: split layout */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-12">
+          <div>
+            <span className="text-xs font-bold tracking-[0.2em] uppercase text-accent-dark">Work</span>
+            <h2 className="mt-2 text-display-sm text-primary">
+              {WORK.heading}
+            </h2>
+          </div>
+          <p className="text-text-sub text-sm md:text-base max-w-sm md:text-right md:pb-1">
             {WORK.subHeading}
           </p>
         </div>
 
-        {/* Project types */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Project cards: unified 2-column grid */}
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
           {WORK.projects.map((project) => (
             <div
               key={project.title}
@@ -33,32 +41,28 @@ export default function Work() {
           ))}
         </div>
 
-        {/* Daily schedule */}
-        <div className="mt-16 bg-bg-pale rounded-2xl p-6 md:p-8 border border-sub/30 max-w-2xl mx-auto">
-          <h3 className="text-lg font-bold text-primary text-center">
-            {WORK.dailySchedule.title}
-          </h3>
-          <p className="mt-1 text-xs text-text-sub text-center">
-            {WORK.dailySchedule.note}
-          </p>
-          <ol className="mt-6 space-y-4" aria-label="1日のスケジュール例">
-            {WORK.dailySchedule.items.map((item) => (
-              <li key={item.time} className="flex gap-4 items-start">
-                <span className="shrink-0 text-sm font-bold text-primary w-14 text-right tabular-nums">
-                  {item.time}
-                </span>
-                <span className="w-2.5 h-2.5 rounded-full bg-sub mt-1.5 shrink-0 ring-2 ring-sub/30" aria-hidden="true" />
-                <span className="text-sm text-text-main leading-relaxed">
-                  {item.task}
-                </span>
-              </li>
-            ))}
-          </ol>
-        </div>
+        {/* Daily schedule + Work scene photo: 2-column */}
+        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h3 className="text-lg font-bold text-primary">
+              {WORK.dailySchedule.title}
+            </h3>
+            <p className="mt-1 text-xs text-text-sub">
+              {WORK.dailySchedule.note}
+            </p>
+            <div className="mt-8 relative pl-8 border-l-2 border-sub/30 space-y-8">
+              {WORK.dailySchedule.items.map((item) => (
+                <div key={item.time} className="relative">
+                  <span className="absolute -left-[calc(0.5rem+1px)] top-0.5 w-3 h-3 rounded-full bg-accent border-2 border-white" aria-hidden="true" />
+                  <span className="text-sm font-bold text-primary tabular-nums">{item.time}</span>
+                  <p className="text-sm text-text-sub mt-0.5">{item.task}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        {/* Work scene placeholder */}
-        <div className="mt-12 flex justify-center">
-          <div className="relative w-full max-w-xl rounded-2xl overflow-hidden aspect-[4/3] bg-bg-pale border border-sub/30">
+          {/* Work scene photo */}
+          <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-bg-pale border border-sub/30 lg:sticky lg:top-24">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/placeholder/work.svg"

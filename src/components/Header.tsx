@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { COMPANY } from "@/data/company";
 
 const NAV_ITEMS = [
@@ -15,12 +15,23 @@ const NAV_ITEMS = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-sub/30">
-      <div className="mx-auto max-w-6xl flex items-center justify-between px-4 h-14">
-        <a href="#" className="flex items-center gap-2">
-          <span className="flex flex-col gap-0.5" aria-hidden="true">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-sub/30 transition-all duration-300 ${
+        scrolled ? "shadow-sm" : ""
+      }`}
+    >
+      <div className={`mx-auto max-w-6xl flex items-center justify-between px-4 transition-all duration-300 ${scrolled ? "h-14" : "h-16"}`}>
+        <a href="#" className="group flex items-center gap-2">
+          <span className="flex flex-col gap-0.5 group-hover:gap-1 transition-all" aria-hidden="true">
             <span className="block w-5 h-0.5 bg-accent rounded-full" />
             <span className="block w-4 h-0.5 bg-accent rounded-full" />
             <span className="block w-3 h-0.5 bg-accent rounded-full" />
@@ -84,24 +95,27 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <nav className="lg:hidden border-t border-sub/20 bg-white" aria-label="モバイルナビゲーション">
-          <ul className="py-2">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 text-sm text-text-sub hover:bg-bg-pale hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+      {/* Mobile menu: slide animation */}
+      <nav
+        className={`lg:hidden border-t border-sub/20 bg-white overflow-hidden transition-[max-height] duration-300 ease-out ${
+          isOpen ? "max-h-96" : "max-h-0"
+        }`}
+        aria-label="モバイルナビゲーション"
+      >
+        <ul className="py-2">
+          {NAV_ITEMS.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="block px-4 py-3 text-sm text-text-sub hover:bg-bg-pale hover:text-primary transition-colors"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }

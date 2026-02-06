@@ -1,49 +1,71 @@
+
 import { PROOF, PROOF_CARDS } from "@/data/company";
 
+const cardStyles = [
+  "bg-accent text-primary-dark",
+  "bg-white shadow-sm",
+  "bg-primary text-white",
+] as const;
+
+const numberColors = ["", "", "text-accent"];
+const unitColors = ["text-primary-dark/60", "text-text-sub", "text-white/60"];
+const labelColors = ["text-primary-dark", "text-primary", "text-white"];
+const noteColors = ["text-primary-dark/60", "text-text-sub", "text-white/60"];
+
 export default function Proof() {
+
   return (
-    <section id="proof" className="bg-bg-pale/60 py-20 md:py-28">
+    <section
+     
+      id="proof"
+      className="bg-white pt-24 md:pt-36 pb-16 md:pb-24"
+    >
       <div className="mx-auto max-w-6xl px-4">
-        <div className="text-center">
-          <span className="section-label">Evidence</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            {PROOF.heading}
-          </h2>
-          <div className="accent-line" aria-hidden="true" />
-          <p className="mt-4 text-text-sub text-sm md:text-base">
-            {PROOF.subHeading}
-          </p>
+        {/* Header: left-aligned with bg watermark */}
+        <div className="relative">
+          <span className="bg-text top-0 left-0" aria-hidden="true">Evidence</span>
+          <div className="relative z-10">
+            <h2 className="text-display-sm text-primary">
+              {PROOF.heading}
+            </h2>
+            <p className="mt-3 text-text-sub text-base max-w-lg">
+              {PROOF.subHeading}
+            </p>
+          </div>
         </div>
 
-        {/* セクション写真 */}
-        <div className="mt-12 rounded-2xl overflow-hidden aspect-[12/5] border border-sub/30">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={PROOF.image}
-            alt="施工実績（後日差し替え）"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+        {/* Full-bleed photo */}
+        <div className="mt-12 -mx-4 md:-mx-8">
+          <div className="aspect-[12/5] overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={PROOF.image}
+              alt="施工実績（後日差し替え）"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {PROOF_CARDS.map((card) => (
+        {/* Cards: 3-column */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {PROOF_CARDS.map((card, i) => (
             <div
               key={card.label}
-              className="bg-white border border-sub/30 rounded-2xl p-6 text-center hover:shadow-md hover:border-sub transition-all"
+              className={`rounded-2xl p-6 text-center ${cardStyles[i]}`}
             >
-              <div className="text-5xl md:text-6xl font-extrabold text-primary leading-none">
+              <div className={`text-5xl md:text-6xl font-extrabold leading-none ${numberColors[i]}`}>
                 {card.number}
               </div>
               <div className="mx-auto mt-2 w-8 h-0.5 bg-accent rounded-full" aria-hidden="true" />
-              <div className="mt-2 text-sm text-text-sub font-medium">
+              <div className={`mt-2 text-sm font-medium ${unitColors[i]}`}>
                 {card.unit}
               </div>
-              <div className="mt-3 text-base font-bold text-primary whitespace-pre-line">
+              <div className={`mt-3 text-base font-bold whitespace-pre-line ${labelColors[i]}`}>
                 {card.label}
               </div>
               {card.note && (
-                <p className="mt-2 text-xs text-text-sub leading-relaxed">
+                <p className={`mt-2 text-xs leading-relaxed ${noteColors[i]}`}>
                   {card.note}
                 </p>
               )}

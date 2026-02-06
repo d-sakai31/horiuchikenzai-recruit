@@ -1,49 +1,68 @@
+
 import { GROWTH } from "@/data/company";
 
 export default function Growth() {
+
   return (
-    <section id="growth" className="bg-white/70 py-20 md:py-28">
+    <section
+     
+      id="growth"
+      className="bg-bg-pale/30 py-14 md:py-20"
+    >
       <div className="mx-auto max-w-6xl px-4">
-        <div className="text-center">
-          <span className="section-label">Growth</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-primary">
+        {/* Header: horizontal rule + label */}
+        <div className="">
+          <div className="flex items-center gap-4">
+            <span className="text-xs font-bold tracking-[0.2em] uppercase text-sub-dark">Growth</span>
+            <span className="flex-1 h-px bg-sub/30" aria-hidden="true" />
+          </div>
+          <h2 className="mt-4 text-display-sm text-primary">
             {GROWTH.heading}
           </h2>
-          <div className="accent-line" aria-hidden="true" />
-          <p className="mt-4 text-text-sub text-sm md:text-base max-w-lg mx-auto">
-            {GROWTH.subHeading}
-          </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* New building image */}
-          <div className="relative order-2">
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-bg-pale border border-sub/30">
+        {/* Content: single column with image background */}
+        <div className="relative mt-12">
+          {/* Background image (desktop only) */}
+          <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block" aria-hidden="true">
+            <div className="w-full h-full opacity-[0.08] rounded-3xl overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={GROWTH.image}
-                alt="新社屋の外観（後日差し替え）"
+                alt=""
                 className="w-full h-full object-cover"
-                loading="lazy"
               />
             </div>
-            <div className="absolute -top-2 -right-2 w-16 h-16 bg-sub/25 rounded-xl -z-10" aria-hidden="true" />
           </div>
 
-          {/* Points */}
-          <div className="space-y-5 order-1">
-            {GROWTH.points.map((point) => (
+          {/* Mobile: inline image */}
+          <div className="lg:hidden mb-8 rounded-2xl overflow-hidden aspect-[4/3]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={GROWTH.image}
+              alt="新社屋の外観（後日差し替え）"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Points: alternating indent */}
+          <div className="relative z-10 space-y-6">
+            {GROWTH.points.map((point, i) => (
               <div
                 key={point.title}
-                className="bg-bg-pale rounded-2xl p-6 border border-sub/30"
               >
-                <h3 className="text-base font-bold text-primary leading-snug flex items-start gap-2">
-                  <span className="w-1.5 h-5 bg-accent rounded-full shrink-0 mt-0.5" aria-hidden="true" />
-                  {point.title}
-                </h3>
-                <p className="mt-2 text-sm text-text-sub leading-relaxed pl-4">
-                  {point.description}
-                </p>
+                <div className="flex items-start gap-4">
+                  <span className="shrink-0 w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center text-accent-dark font-bold text-sm">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="text-base font-bold text-primary">{point.title}</h3>
+                    <p className="mt-2 text-sm text-text-sub leading-relaxed">
+                      {point.description}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

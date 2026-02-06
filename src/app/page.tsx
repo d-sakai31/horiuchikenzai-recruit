@@ -4,6 +4,7 @@ import Proof from "@/components/Proof";
 import Work from "@/components/Work";
 import Culture from "@/components/Culture";
 import Growth from "@/components/Growth";
+import QuoteBand from "@/components/QuoteBand";
 import RealEstate from "@/components/RealEstate";
 import Tracks from "@/components/Tracks";
 import FAQ from "@/components/FAQ";
@@ -74,6 +75,7 @@ export default function Page() {
       <Proof />
       <Work />
       <Culture />
+      <QuoteBand />
       <Growth />
       <RealEstate />
       <Tracks />

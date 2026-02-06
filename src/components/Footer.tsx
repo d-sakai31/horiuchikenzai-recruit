@@ -1,13 +1,15 @@
+"use client";
+
 import { COMPANY, FOOTER } from "@/data/company";
 import { InstagramIcon, YouTubeIcon } from "./SnsIcons";
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-pale border-t border-sub/30 py-14">
+    <footer className="bg-bg-pale border-t border-sub/30 py-14 relative">
       <div className="mx-auto max-w-6xl px-4">
         {/* Logo area */}
         <div className="flex items-center gap-2 mb-8">
-          <span className="flex flex-col gap-0.5" aria-hidden="true">
+          <span className="group flex flex-col gap-0.5 hover:gap-1 transition-all cursor-default" aria-hidden="true">
             <span className="block w-5 h-0.5 bg-accent rounded-full" />
             <span className="block w-4 h-0.5 bg-accent rounded-full" />
             <span className="block w-3 h-0.5 bg-accent rounded-full" />
@@ -75,6 +77,18 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} {COMPANY.name}. All rights reserved.
         </div>
       </div>
+
+      {/* Scroll to top */}
+      <button
+        type="button"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="absolute right-4 md:right-8 top-0 -translate-y-1/2 w-10 h-10 bg-white border border-sub/30 rounded-full flex items-center justify-center text-text-sub hover:text-primary hover:border-primary transition-colors shadow-sm"
+        aria-label="ページトップへ戻る"
+      >
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
     </footer>
   );
 }
