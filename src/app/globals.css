@@ -66,3 +66,5 @@ body {
   border-radius: 2px;
   margin: 0.75rem auto 0;
 }
+
+/* Lottie背景: prefers-reduced-motion 対応は lottie-web 側で制御 */

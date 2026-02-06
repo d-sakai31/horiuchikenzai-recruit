@@ -2,7 +2,7 @@ import { WORK } from "@/data/company";
 
 export default function Work() {
   return (
-    <section id="work" className="bg-white py-20 md:py-28">
+    <section id="work" className="bg-white/70 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
           <span className="section-label">Work</span>
@@ -16,7 +16,7 @@ export default function Work() {
         </div>
 
         {/* Project types */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
           {WORK.projects.map((project) => (
             <div
               key={project.title}
@@ -58,7 +58,7 @@ export default function Work() {
 
         {/* Work scene placeholder */}
         <div className="mt-12 flex justify-center">
-          <div className="relative w-full max-w-xl rounded-2xl overflow-hidden aspect-video bg-bg-pale border border-sub/30">
+          <div className="relative w-full max-w-xl rounded-2xl overflow-hidden aspect-[4/3] bg-bg-pale border border-sub/30">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/placeholder/work.svg"

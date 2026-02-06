@@ -2,7 +2,7 @@ import { GROWTH } from "@/data/company";
 
 export default function Growth() {
   return (
-    <section id="growth" className="bg-white py-20 md:py-28">
+    <section id="growth" className="bg-white/70 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
           <span className="section-label">Growth</span>
@@ -17,7 +17,7 @@ export default function Growth() {
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* New building image */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative order-2">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-bg-pale border border-sub/30">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -27,15 +27,15 @@ export default function Growth() {
                 loading="lazy"
               />
             </div>
-            <div className="absolute -top-2 -left-2 w-14 h-14 border-2 border-sub/40 rounded-xl -z-10" aria-hidden="true" />
+            <div className="absolute -top-2 -right-2 w-16 h-16 bg-sub/25 rounded-xl -z-10" aria-hidden="true" />
           </div>
 
           {/* Points */}
-          <div className="space-y-5 order-1 lg:order-2">
+          <div className="space-y-5 order-1">
             {GROWTH.points.map((point) => (
               <div
                 key={point.title}
-                className="bg-bg-pale rounded-2xl p-5 border border-sub/30"
+                className="bg-bg-pale rounded-2xl p-6 border border-sub/30"
               >
                 <h3 className="text-base font-bold text-primary leading-snug flex items-start gap-2">
                   <span className="w-1.5 h-5 bg-accent rounded-full shrink-0 mt-0.5" aria-hidden="true" />

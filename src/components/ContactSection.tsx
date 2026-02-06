@@ -16,7 +16,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-bg-pale py-20 md:py-28">
+    <section id="contact" className="bg-bg-pale/60 py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-4">
         <div className="text-center">
           <span className="section-label">Contact</span>
@@ -41,7 +41,11 @@ export default function ContactSection() {
 
             {formState === "sent" ? (
               <div className="text-center py-8">
-                <div className="w-12 h-12 rounded-full bg-sub text-primary flex items-center justify-center mx-auto mb-3 text-xl font-bold">&#10003;</div>
+                <div className="w-12 h-12 rounded-full bg-sub text-primary flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
                 <p className="font-bold text-primary">送信しました</p>
                 <p className="text-sm text-text-sub mt-2">
                   ※これはデモ送信です。本番環境ではフォームサービスに接続してください。
@@ -51,12 +55,13 @@ export default function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="contact-name" className="block text-sm font-medium text-primary mb-1">
-                    お名前 <span className="text-red-500">*</span>
+                    お名前 <span className="text-red-500" aria-hidden="true">*</span>
                   </label>
                   <input
                     id="contact-name"
                     type="text"
                     required
+                    aria-required="true"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="w-full bg-white border border-sub/40 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sub/40 focus:border-sub"
@@ -65,12 +70,13 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <label htmlFor="contact-email" className="block text-sm font-medium text-primary mb-1">
-                    メールアドレス <span className="text-red-500">*</span>
+                    メールアドレス <span className="text-red-500" aria-hidden="true">*</span>
                   </label>
                   <input
                     id="contact-email"
                     type="email"
                     required
+                    aria-required="true"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full bg-white border border-sub/40 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-sub/40 focus:border-sub"

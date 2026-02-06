@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SEO, COMPANY } from "@/data/company";
 import Header from "@/components/Header";
+import WaveBackground from "@/components/WaveBackground";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -36,8 +37,9 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white text-text-main antialiased">
+        <WaveBackground />
         <Header />
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
       </body>
     </html>
   );

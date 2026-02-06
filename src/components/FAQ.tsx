@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FAQ_ITEMS, type FAQItem } from "@/data/company";
+import { FAQ_SECTION, FAQ_ITEMS, type FAQItem } from "@/data/company";
 
 function FAQAccordionItem({ item }: { item: FAQItem }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,7 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
     <div className="border-b border-sub/20 last:border-b-0">
       <button
         type="button"
-        className="w-full flex items-center justify-between py-5 text-left group"
+        className="w-full flex items-center justify-between py-5 text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sub/40 rounded-lg"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
@@ -28,29 +28,33 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
           </svg>
         </span>
       </button>
-      {isOpen && (
-        <div className="pb-5 pr-12">
-          <p className="text-sm text-text-sub leading-relaxed">
-            {item.answer}
-          </p>
+      <div
+        className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+          isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="pb-5 pr-12">
+            <p className="text-sm text-text-sub leading-relaxed">
+              {item.answer}
+            </p>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-white py-20 md:py-28">
-      <div className="mx-auto max-w-2xl px-4">
+    <section id="faq" className="bg-white/70 py-20 md:py-28">
+      <div className="mx-auto max-w-3xl px-4">
         <div className="text-center">
-          <span className="section-label">FAQ</span>
           <h2 className="text-2xl md:text-3xl font-bold text-primary">
-            よくある質問
+            {FAQ_SECTION.heading}
           </h2>
-          <div className="accent-line" aria-hidden="true" />
           <p className="mt-4 text-text-sub text-sm md:text-base">
-            応募前に気になることをまとめました。
+            {FAQ_SECTION.subHeading}
           </p>
         </div>
 
@@ -61,9 +65,9 @@ export default function FAQ() {
         </div>
 
         <p className="mt-8 text-center text-sm text-text-sub">
-          上記以外のご質問も、お気軽に
+          {FAQ_SECTION.footerText}
           <a href="#contact" className="text-primary hover:underline font-medium">
-            お問い合わせ
+            {FAQ_SECTION.footerLinkText}
           </a>
           ください。
         </p>

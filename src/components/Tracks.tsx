@@ -14,7 +14,7 @@ function TrackCard({ heading, subHeading, points, note, variant }: TrackCardProp
   return (
     <div className="bg-white rounded-2xl border border-sub/30 overflow-hidden hover:shadow-md transition-shadow">
       <div className={`${isMid ? "bg-accent" : "bg-primary"} ${isMid ? "text-primary-dark" : "text-white"} px-6 py-5`}>
-        <h3 className="text-xl font-bold">{heading}</h3>
+        <h3 className="text-lg font-bold">{heading}</h3>
         <p className={`text-sm mt-1 ${isMid ? "text-primary-dark/60" : "text-sub-light"}`}>{subHeading}</p>
       </div>
       <div className="p-6 space-y-5">
@@ -41,16 +41,16 @@ function TrackCard({ heading, subHeading, points, note, variant }: TrackCardProp
 
 export default function Tracks() {
   return (
-    <section id="tracks" className="bg-bg-pale py-20 md:py-28">
+    <section id="tracks" className="bg-bg-pale/60 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
           <span className="section-label">Careers</span>
           <h2 className="text-2xl md:text-3xl font-bold text-primary">
-            あなたに合った入り口
+            {TRACKS.heading}
           </h2>
           <div className="accent-line" aria-hidden="true" />
           <p className="mt-4 text-text-sub text-sm md:text-base">
-            中途も新卒も、それぞれの強みを活かせるポジションがあります。
+            {TRACKS.subHeading}
           </p>
         </div>
 
@@ -74,9 +74,9 @@ export default function Tracks() {
         <div className="mt-10 text-center">
           <a
             href="#contact"
-            className="inline-block bg-accent hover:bg-accent-light text-primary-dark font-bold px-8 py-3.5 rounded-full transition-colors"
+            className="inline-block bg-accent hover:bg-accent-light text-primary-dark font-bold text-lg px-10 py-4 rounded-full transition-colors"
           >
-            自分に合うポジションを相談する
+            {TRACKS.ctaLabel}
           </a>
         </div>
       </div>

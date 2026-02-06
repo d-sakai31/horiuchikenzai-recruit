@@ -10,7 +10,7 @@ export const COMPANY = {
   address: "長野県須坂市",
   siteUrl: "https://www.horiuchikenzai.co.jp",
   contactEmail: "recruit@horiuchikenzai.co.jp", // 仮 — 本番に差し替え
-  contactPhone: "026-XXX-XXXX", // 仮 — 本番に差し替え
+  contactPhone: "026-246-1660",
   socialLinks: {
     instagram: "https://www.instagram.com/horiken71411/",
     youtube: "https://www.youtube.com/channel/UC7EmLuxRdMe2Q3pOMNNUdFg",
@@ -21,16 +21,23 @@ export const COMPANY = {
 // Hero
 // --------------------------------------------------
 export const HERO = {
-  catchCopy: "新社屋、新事業、\n若手が動かす建材会社。",
+  catchCopy: "新社屋、新事業、\n若手が動かす\n建材会社。",
   subCopy:
     "年間300か所以上の窓・玄関を手がけ、不動産事業も立ち上がった堀内建材。\n今、この成長フェーズを一緒につくる人を探しています。",
-  ctaLabel: "募集について話を聞く",
+  ctaLabel: "お問い合わせ",
+  ctaSubText: "応募前の相談だけでもOK",
   bgImage: "/placeholder/hero.svg",
 } as const;
 
 // --------------------------------------------------
 // Proof（数字実績）
 // --------------------------------------------------
+export const PROOF = {
+  heading: "数字で見る堀内建材",
+  subHeading: "地域密着で積み重ねてきた、施工実績と信頼。",
+  image: "/placeholder/evidence.svg",
+} as const;
+
 export interface ProofCard {
   number: string;
   unit: string;
@@ -54,11 +61,11 @@ export const PROOF_CARDS: ProofCard[] = [
   {
     number: "28",
     unit: "件",
-    label: "補助金申請サポート（2023年）",
+    label: "補助金申請サポート\n（2023年）",
     note: "2024年も8月時点で25件。お客様の費用負担を減らす提案力",
   },
   {
-    number: "須高",
+    number: "須坂",
     unit: "エリア特化",
     label: "地域密着のスピード対応",
     note: "施工エリアを須坂・小布施・高山に絞り、即日対応できるフットワーク",
@@ -113,6 +120,7 @@ export const WORK = {
 export const CULTURE = {
   heading: "チームの空気",
   subHeading: "「仲がいい」を言葉ではなく、日常で。",
+  snsText: "日常の様子は SNS でも発信しています",
   image: "/placeholder/culture.svg",
   points: [
     {
@@ -184,6 +192,9 @@ export const REAL_ESTATE = {
 // Tracks（中途/新卒 分岐）
 // --------------------------------------------------
 export const TRACKS = {
+  heading: "あなたに合った入り口",
+  subHeading: "中途も新卒も、それぞれの強みを活かせるポジションがあります。",
+  ctaLabel: "自分に合うポジションを相談する",
   midCareer: {
     heading: "中途採用の方へ",
     subHeading: "経験を活かす場所が、ここにある",
@@ -201,7 +212,7 @@ export const TRACKS = {
       {
         title: "片道30分圏内で完結する現場",
         description:
-          "須高エリア特化だから、県外出張や長距離移動がない。現場から事務所に戻れる距離感で、夕方には段取り業務に切り替えられる。",
+          "須坂エリア特化だから、県外出張や長距離移動がない。現場から事務所に戻れる距離感で、夕方には段取り業務に切り替えられる。",
       },
       {
         title: "新規事業の立ち上げに関われる",
@@ -243,6 +254,13 @@ export const TRACKS = {
 // --------------------------------------------------
 // FAQ
 // --------------------------------------------------
+export const FAQ_SECTION = {
+  heading: "よくある質問",
+  subHeading: "応募前に気になることをまとめました。",
+  footerText: "上記以外のご質問も、お気軽に",
+  footerLinkText: "お問い合わせ",
+} as const;
+
 export interface FAQItem {
   question: string;
   answer: string;
@@ -319,7 +337,7 @@ export const CTA = {
     {
       type: "phone" as const,
       label: "電話で問い合わせ",
-      value: "026-XXX-XXXX", // 仮
+      value: "026-246-1660",
       description: "平日 9:00〜17:00（担当：採用窓口）",
     },
   ],
@@ -341,7 +359,7 @@ export const FOOTER = {
   ],
   links: [
     { label: "コーポレートサイト", href: "https://www.horiuchikenzai.co.jp" },
-    { label: "SUMAITE不動産", href: "#" }, // 仮
+    { label: "SUMAITE不動産", href: "https://www.sumaite-f.com/" },
     { label: "Instagram", href: "https://www.instagram.com/horiken71411/" },
   ],
 } as const;

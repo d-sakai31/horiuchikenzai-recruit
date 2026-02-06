@@ -48,7 +48,7 @@ export default function Header() {
             href="#contact"
             className="bg-accent hover:bg-accent-light text-primary-dark text-sm font-bold px-5 py-2 rounded-full transition-colors"
           >
-            話を聞く
+            お問い合わせ
           </a>
         </nav>
 
@@ -58,12 +58,12 @@ export default function Header() {
             href="#contact"
             className="bg-accent hover:bg-accent-light text-primary-dark text-xs font-bold px-4 py-1.5 rounded-full transition-colors"
           >
-            話を聞く
+            お問い合わせ
           </a>
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-text-sub hover:text-primary"
+            className="p-2 text-text-sub hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sub/40 rounded-lg"
             aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
             aria-expanded={isOpen}
           >
