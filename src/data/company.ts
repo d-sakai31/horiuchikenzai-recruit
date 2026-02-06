@@ -12,8 +12,8 @@ export const COMPANY = {
   contactEmail: "recruit@horiuchi-kenzai.co.jp", // 仮 — 本番に差し替え
   contactPhone: "026-XXX-XXXX", // 仮 — 本番に差し替え
   socialLinks: {
-    instagram: "https://www.instagram.com/horiuchi_kenzai/", // 仮
-    youtube: "https://www.youtube.com/@horiuchi-kenzai", // 仮
+    instagram: "https://www.instagram.com/horiken71411/",
+    youtube: "https://www.youtube.com/channel/UC7EmLuxRdMe2Q3pOMNNUdFg",
   },
 } as const;
 
@@ -342,7 +342,7 @@ export const FOOTER = {
   links: [
     { label: "コーポレートサイト", href: "https://horiuchi-kenzai.co.jp" }, // 仮
     { label: "SUMAITE不動産", href: "#" }, // 仮
-    { label: "Instagram", href: "https://www.instagram.com/horiuchi_kenzai/" }, // 仮
+    { label: "Instagram", href: "https://www.instagram.com/horiken71411/" },
   ],
 } as const;
 

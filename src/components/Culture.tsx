@@ -55,7 +55,7 @@ export default function Culture() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://www.instagram.com/horiuchi_kenzai/"
+              href="https://www.instagram.com/horiken71411/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm border border-gray-200 rounded-full px-5 py-2.5 hover:border-primary hover:text-primary transition-colors"
@@ -66,7 +66,7 @@ export default function Culture() {
               Instagram
             </a>
             <a
-              href="https://www.youtube.com/@horiuchi-kenzai"
+              href="https://www.youtube.com/channel/UC7EmLuxRdMe2Q3pOMNNUdFg"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm border border-gray-200 rounded-full px-5 py-2.5 hover:border-primary hover:text-primary transition-colors"
