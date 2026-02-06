@@ -21,33 +21,9 @@ export default function Growth() {
           </h2>
         </div>
 
-        {/* Content: single column with image background */}
-        <div className="relative mt-12">
-          {/* Background image (desktop only) */}
-          <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block" aria-hidden="true">
-            <div className="w-full h-full opacity-[0.08] rounded-3xl overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={GROWTH.image}
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Mobile: inline image */}
-          <div className="lg:hidden mb-8 rounded-2xl overflow-hidden aspect-[4/3]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={GROWTH.image}
-              alt="新社屋の外観（後日差し替え）"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-
-          {/* Points: alternating indent */}
-          <div className="relative z-10 space-y-6">
+        {/* Content */}
+        <div className="mt-12">
+          <div className="space-y-6">
             {GROWTH.points.map((point, i) => (
               <div
                 key={point.title}
