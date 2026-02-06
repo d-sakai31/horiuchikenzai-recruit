@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* HP準拠カラー — ロゴ・見出しSVGから抽出 */
+  /* HP準拠カラー */
   --color-primary: #00374c;
-  --color-primary-light: #005a72;
+  --color-primary-light: #1a5a72;
   --color-primary-dark: #00212e;
   --color-accent: #fac000;
   --color-accent-light: #ffd033;
   --color-accent-dark: #d4a300;
-  --color-bg-warm: #f9f9f7;
-  --color-bg-section: #f0f4f5;
-  --color-text-main: #1a1a1a;
-  --color-text-sub: #4a5568;
+  --color-line-art: #7ec8d8;
+  --color-bg-warm: #faf9f6;
+  --color-bg-section: #f5f7f8;
+  --color-text-main: #222222;
+  --color-text-sub: #5a6472;
   --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
@@ -24,4 +25,25 @@ body {
   color: var(--color-text-main);
   font-family: var(--font-sans);
   line-height: 1.8;
+  background-color: #ffffff;
+}
+
+/* HP風の英語セクションラベル */
+.section-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* HP風のアクセント装飾ライン */
+.accent-line {
+  width: 2.5rem;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  margin: 0.75rem auto 0;
 }

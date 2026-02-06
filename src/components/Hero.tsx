@@ -3,43 +3,45 @@ import { HERO } from "@/data/company";
 export default function Hero() {
   return (
     <section
-      className="relative flex items-center justify-center min-h-[90vh] md:min-h-screen bg-primary-dark text-white overflow-hidden"
+      className="relative bg-white overflow-hidden pt-14"
       aria-label="ファーストビュー"
     >
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-30"
-        style={{ backgroundImage: `url('${HERO.bgImage}')` }}
-        role="img"
-        aria-label="堀内建材の施工現場"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary-dark/60 to-primary-dark/90" />
-
-      {/* Content */}
-      <div className="relative z-10 mx-auto max-w-3xl px-4 py-24 text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight whitespace-pre-line">
-          {HERO.catchCopy}
-        </h1>
-        <p className="mt-6 text-base sm:text-lg leading-relaxed text-white/85 whitespace-pre-line max-w-2xl mx-auto">
-          {HERO.subCopy}
-        </p>
-        <div className="mt-10">
-          <a
-            href="#contact"
-            className="inline-block bg-accent hover:bg-accent-light text-primary-dark font-bold text-base sm:text-lg px-8 py-4 rounded-lg transition-colors shadow-lg"
-          >
-            {HERO.ctaLabel}
-          </a>
+      <div className="mx-auto max-w-6xl px-4 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        {/* Text */}
+        <div className="order-2 lg:order-1">
+          <span className="section-label">Recruit</span>
+          <h1 className="text-3xl sm:text-4xl md:text-[2.7rem] font-bold leading-tight tracking-tight text-primary whitespace-pre-line">
+            {HERO.catchCopy}
+          </h1>
+          <p className="mt-6 text-base leading-relaxed text-text-sub whitespace-pre-line max-w-lg">
+            {HERO.subCopy}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4 items-center">
+            <a
+              href="#contact"
+              className="inline-block bg-accent hover:bg-accent-light text-primary-dark font-bold text-base px-8 py-3.5 rounded-full transition-colors shadow-sm"
+            >
+              {HERO.ctaLabel}
+            </a>
+            <span className="text-sm text-text-sub">
+              応募前の相談だけでもOK
+            </span>
+          </div>
         </div>
-        <div className="mt-6 text-sm text-white/60">
-          応募前の相談だけでもOKです
-        </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10" aria-hidden="true">
-        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
-          <div className="w-1.5 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />
+        {/* Image */}
+        <div className="order-1 lg:order-2 relative">
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-bg-section">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={HERO.bgImage}
+              alt="堀内建材の施工現場"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Decorative accent */}
+          <div className="absolute -bottom-3 -left-3 w-20 h-20 bg-accent/20 rounded-xl -z-10" aria-hidden="true" />
+          <div className="absolute -top-3 -right-3 w-16 h-16 border-2 border-line-art/40 rounded-xl -z-10" aria-hidden="true" />
         </div>
       </div>
     </section>

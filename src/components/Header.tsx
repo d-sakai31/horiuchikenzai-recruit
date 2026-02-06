@@ -17,12 +17,20 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="mx-auto max-w-6xl flex items-center justify-between px-4 h-14">
-        <a href="#" className="font-bold text-primary text-sm md:text-base">
-          {COMPANY.nameShort}
-          <span className="text-xs text-text-sub ml-1 hidden sm:inline">
-            採用情報
+        <a href="#" className="flex items-center gap-2">
+          {/* Logo mark — 黄色バー + ティールの組み合わせ（HP準拠） */}
+          <span className="flex flex-col gap-0.5" aria-hidden="true">
+            <span className="block w-5 h-0.5 bg-accent rounded-full" />
+            <span className="block w-4 h-0.5 bg-accent rounded-full" />
+            <span className="block w-3 h-0.5 bg-accent rounded-full" />
+          </span>
+          <span className="font-bold text-primary text-sm md:text-base">
+            {COMPANY.nameShort}
+            <span className="text-xs text-text-sub ml-1 hidden sm:inline">
+              採用情報
+            </span>
           </span>
         </a>
 
@@ -39,7 +47,7 @@ export default function Header() {
           ))}
           <a
             href="#contact"
-            className="bg-accent hover:bg-accent-light text-primary-dark text-sm font-bold px-4 py-2 rounded transition-colors"
+            className="bg-accent hover:bg-accent-light text-primary-dark text-sm font-bold px-5 py-2 rounded-full transition-colors"
           >
             話を聞く
           </a>
@@ -49,7 +57,7 @@ export default function Header() {
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href="#contact"
-            className="bg-accent hover:bg-accent-light text-primary-dark text-xs font-bold px-3 py-1.5 rounded transition-colors"
+            className="bg-accent hover:bg-accent-light text-primary-dark text-xs font-bold px-4 py-1.5 rounded-full transition-colors"
           >
             話を聞く
           </a>
@@ -86,7 +94,7 @@ export default function Header() {
                 <a
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2.5 text-sm text-text-sub hover:bg-gray-50 hover:text-primary transition-colors"
+                  className="block px-4 py-3 text-sm text-text-sub hover:bg-bg-section hover:text-primary transition-colors"
                 >
                   {item.label}
                 </a>

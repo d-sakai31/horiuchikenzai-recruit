@@ -10,7 +10,7 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
     <div className="border-b border-gray-200">
       <button
         type="button"
-        className="w-full flex items-center justify-between py-4 text-left group"
+        className="w-full flex items-center justify-between py-5 text-left group"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
@@ -18,16 +18,18 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
           {item.question}
         </span>
         <span
-          className={`shrink-0 w-6 h-6 flex items-center justify-center text-text-sub transition-transform ${isOpen ? "rotate-45" : ""}`}
+          className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+            isOpen ? "bg-primary text-white rotate-45" : "bg-bg-section text-text-sub"
+          }`}
           aria-hidden="true"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
         </span>
       </button>
       {isOpen && (
-        <div className="pb-4 pr-10">
+        <div className="pb-5 pr-12">
           <p className="text-sm text-text-sub leading-relaxed">
             {item.answer}
           </p>
@@ -39,16 +41,20 @@ function FAQAccordionItem({ item }: { item: FAQItem }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-white py-20 md:py-28">
+    <section id="faq" className="bg-bg-section py-20 md:py-28">
       <div className="mx-auto max-w-2xl px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-primary">
-          よくある質問
-        </h2>
-        <p className="mt-3 text-center text-text-sub text-sm md:text-base">
-          応募前に気になることをまとめました。
-        </p>
+        <div className="text-center">
+          <span className="section-label">FAQ</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-primary">
+            よくある質問
+          </h2>
+          <div className="accent-line" aria-hidden="true" />
+          <p className="mt-4 text-text-sub text-sm md:text-base">
+            応募前に気になることをまとめました。
+          </p>
+        </div>
 
-        <div className="mt-10">
+        <div className="mt-10 bg-white rounded-2xl border border-gray-200 px-6">
           {FAQ_ITEMS.map((item) => (
             <FAQAccordionItem key={item.question} item={item} />
           ))}

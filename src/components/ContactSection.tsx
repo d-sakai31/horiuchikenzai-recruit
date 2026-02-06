@@ -16,18 +16,22 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-bg-section py-20 md:py-28">
+    <section id="contact" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-primary whitespace-pre-line">
-          {CTA.heading}
-        </h2>
-        <p className="mt-3 text-center text-text-sub text-sm md:text-base whitespace-pre-line max-w-md mx-auto">
-          {CTA.subHeading}
-        </p>
+        <div className="text-center">
+          <span className="section-label">Contact</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-primary whitespace-pre-line">
+            {CTA.heading}
+          </h2>
+          <div className="accent-line" aria-hidden="true" />
+          <p className="mt-4 text-text-sub text-sm md:text-base whitespace-pre-line max-w-md mx-auto">
+            {CTA.subHeading}
+          </p>
+        </div>
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Form */}
-          <div className="bg-white rounded-xl p-6 md:p-8 border border-gray-200">
+          <div className="bg-bg-section rounded-2xl p-6 md:p-8">
             <h3 className="text-lg font-bold text-text-main mb-1">
               Webフォームで問い合わせ
             </h3>
@@ -37,7 +41,7 @@ export default function ContactSection() {
 
             {formState === "sent" ? (
               <div className="text-center py-8">
-                <div className="text-primary text-4xl mb-3" aria-hidden="true">&#10003;</div>
+                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 text-xl">&#10003;</div>
                 <p className="font-bold text-text-main">送信しました</p>
                 <p className="text-sm text-text-sub mt-2">
                   ※これはデモ送信です。本番環境ではフォームサービスに接続してください。
@@ -55,7 +59,7 @@ export default function ContactSection() {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
+                    className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                     placeholder="堀内 太郎"
                   />
                 </div>
@@ -69,7 +73,7 @@ export default function ContactSection() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
+                    className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                     placeholder="example@email.com"
                   />
                 </div>
@@ -82,13 +86,13 @@ export default function ContactSection() {
                     rows={4}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary resize-y"
+                    className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary resize-y"
                     placeholder="気になっていること、聞きたいことなど自由にご記入ください。「まだ応募は決めていないが話を聞きたい」でもOKです。"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-accent hover:bg-accent-light text-primary-dark font-bold py-3 rounded-lg transition-colors"
+                  className="w-full bg-accent hover:bg-accent-light text-primary-dark font-bold py-3 rounded-full transition-colors"
                 >
                   送信する
                 </button>
@@ -98,7 +102,7 @@ export default function ContactSection() {
 
           {/* Other contact methods */}
           <div className="space-y-6">
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
+            <div className="bg-bg-section rounded-2xl p-6">
               <h3 className="text-base font-bold text-text-main">
                 メールで直接問い合わせ
               </h3>
@@ -113,7 +117,7 @@ export default function ContactSection() {
               </a>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
+            <div className="bg-bg-section rounded-2xl p-6">
               <h3 className="text-base font-bold text-text-main">
                 電話で問い合わせ
               </h3>
@@ -128,7 +132,7 @@ export default function ContactSection() {
               </a>
             </div>
 
-            <div className="bg-primary-dark/5 rounded-xl p-6 border border-primary/10">
+            <div className="rounded-2xl p-6 border-2 border-accent/30 bg-accent/5">
               <h3 className="text-base font-bold text-primary">
                 「応募前相談」も歓迎です
               </h3>
