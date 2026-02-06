@@ -39,7 +39,7 @@ export default function Header() {
           ))}
           <a
             href="#contact"
-            className="bg-accent hover:bg-accent-light text-white text-sm font-bold px-4 py-2 rounded transition-colors"
+            className="bg-accent hover:bg-accent-light text-primary-dark text-sm font-bold px-4 py-2 rounded transition-colors"
           >
             話を聞く
           </a>
@@ -49,7 +49,7 @@ export default function Header() {
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href="#contact"
-            className="bg-accent hover:bg-accent-light text-white text-xs font-bold px-3 py-1.5 rounded transition-colors"
+            className="bg-accent hover:bg-accent-light text-primary-dark text-xs font-bold px-3 py-1.5 rounded transition-colors"
           >
             話を聞く
           </a>

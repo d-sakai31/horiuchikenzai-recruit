@@ -37,7 +37,7 @@ export default function ContactSection() {
 
             {formState === "sent" ? (
               <div className="text-center py-8">
-                <div className="text-accent text-4xl mb-3" aria-hidden="true">&#10003;</div>
+                <div className="text-primary text-4xl mb-3" aria-hidden="true">&#10003;</div>
                 <p className="font-bold text-text-main">送信しました</p>
                 <p className="text-sm text-text-sub mt-2">
                   ※これはデモ送信です。本番環境ではフォームサービスに接続してください。
@@ -55,7 +55,7 @@ export default function ContactSection() {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                     placeholder="堀内 太郎"
                   />
                 </div>
@@ -69,7 +69,7 @@ export default function ContactSection() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                     placeholder="example@email.com"
                   />
                 </div>
@@ -82,13 +82,13 @@ export default function ContactSection() {
                     rows={4}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent resize-y"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary resize-y"
                     placeholder="気になっていること、聞きたいことなど自由にご記入ください。「まだ応募は決めていないが話を聞きたい」でもOKです。"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-accent hover:bg-accent-light text-white font-bold py-3 rounded-lg transition-colors"
+                  className="w-full bg-accent hover:bg-accent-light text-primary-dark font-bold py-3 rounded-lg transition-colors"
                 >
                   送信する
                 </button>
@@ -107,7 +107,7 @@ export default function ContactSection() {
               </p>
               <a
                 href={`mailto:${COMPANY.contactEmail}`}
-                className="mt-3 inline-block text-accent hover:underline text-sm font-medium break-all"
+                className="mt-3 inline-block text-primary hover:underline text-sm font-medium break-all"
               >
                 {COMPANY.contactEmail}
               </a>
@@ -122,7 +122,7 @@ export default function ContactSection() {
               </p>
               <a
                 href={`tel:${COMPANY.contactPhone.replace(/-/g, "")}`}
-                className="mt-3 inline-block text-accent hover:underline text-lg font-bold"
+                className="mt-3 inline-block text-primary hover:underline text-lg font-bold"
               >
                 {COMPANY.contactPhone}
               </a>

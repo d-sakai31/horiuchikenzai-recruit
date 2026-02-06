@@ -56,7 +56,7 @@ export default function FAQ() {
 
         <p className="mt-8 text-center text-sm text-text-sub">
           上記以外のご質問も、お気軽に
-          <a href="#contact" className="text-accent hover:underline font-medium">
+          <a href="#contact" className="text-primary hover:underline font-medium">
             お問い合わせ
           </a>
           ください。

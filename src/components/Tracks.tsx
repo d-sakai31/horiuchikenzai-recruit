@@ -14,9 +14,9 @@ function TrackCard({ heading, subHeading, points, note, variant }: TrackCardProp
 
   return (
     <div className={`bg-white rounded-xl border-2 ${borderColor} overflow-hidden`}>
-      <div className={`${badgeColor} text-white px-6 py-4`}>
+      <div className={`${badgeColor} ${variant === "mid" ? "text-primary-dark" : "text-white"} px-6 py-4`}>
         <h3 className="text-xl font-bold">{heading}</h3>
-        <p className="text-sm text-white/80 mt-1">{subHeading}</p>
+        <p className={`text-sm mt-1 ${variant === "mid" ? "text-primary-dark/70" : "text-white/80"}`}>{subHeading}</p>
       </div>
       <div className="p-6 space-y-5">
         {points.map((point) => (
@@ -70,7 +70,7 @@ export default function Tracks() {
         <div className="mt-10 text-center">
           <a
             href="#contact"
-            className="inline-block bg-accent hover:bg-accent-light text-white font-bold px-8 py-3 rounded-lg transition-colors"
+            className="inline-block bg-accent hover:bg-accent-light text-primary-dark font-bold px-8 py-3 rounded-lg transition-colors"
           >
             自分に合うポジションを相談する
           </a>

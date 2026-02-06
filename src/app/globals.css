@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1a365d;
-  --color-primary-light: #2a4a7f;
-  --color-primary-dark: #0f2341;
-  --color-accent: #c77d2e;
-  --color-accent-light: #d4944a;
-  --color-bg-warm: #faf8f5;
-  --color-bg-section: #f0ede8;
+  /* HP準拠カラー — ロゴ・見出しSVGから抽出 */
+  --color-primary: #00374c;
+  --color-primary-light: #005a72;
+  --color-primary-dark: #00212e;
+  --color-accent: #fac000;
+  --color-accent-light: #ffd033;
+  --color-accent-dark: #d4a300;
+  --color-bg-warm: #f9f9f7;
+  --color-bg-section: #f0f4f5;
   --color-text-main: #1a1a1a;
-  --color-text-sub: #4a4a4a;
+  --color-text-sub: #4a5568;
   --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 

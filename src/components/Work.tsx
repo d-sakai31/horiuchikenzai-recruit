@@ -39,7 +39,7 @@ export default function Work() {
           <ol className="mt-6 space-y-4" aria-label="1日のスケジュール例">
             {WORK.dailySchedule.items.map((item) => (
               <li key={item.time} className="flex gap-4 items-start">
-                <span className="shrink-0 text-sm font-bold text-accent w-14 text-right tabular-nums">
+                <span className="shrink-0 text-sm font-bold text-primary w-14 text-right tabular-nums">
                   {item.time}
                 </span>
                 <span className="text-sm text-text-main leading-relaxed">

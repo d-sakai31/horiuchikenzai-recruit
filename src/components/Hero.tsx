@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="mt-10">
           <a
             href="#contact"
-            className="inline-block bg-accent hover:bg-accent-light text-white font-bold text-base sm:text-lg px-8 py-4 rounded-lg transition-colors shadow-lg"
+            className="inline-block bg-accent hover:bg-accent-light text-primary-dark font-bold text-base sm:text-lg px-8 py-4 rounded-lg transition-colors shadow-lg"
           >
             {HERO.ctaLabel}
           </a>

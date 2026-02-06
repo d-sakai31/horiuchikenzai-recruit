@@ -17,10 +17,11 @@ export default function Proof() {
               key={card.label}
               className="bg-bg-warm border border-gray-200 rounded-xl p-6 text-center"
             >
-              <div className="text-4xl md:text-5xl font-extrabold text-accent leading-none">
+              <div className="text-4xl md:text-5xl font-extrabold text-primary leading-none">
                 {card.number}
               </div>
-              <div className="mt-1 text-sm text-text-sub font-medium">
+              <div className="mx-auto mt-2 w-10 h-1 rounded-full bg-accent" aria-hidden="true" />
+              <div className="mt-2 text-sm text-text-sub font-medium">
                 {card.unit}
               </div>
               <div className="mt-3 text-base font-bold text-text-main">
