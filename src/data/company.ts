@@ -8,8 +8,8 @@ export const COMPANY = {
   nameShort: "堀内建材",
   realEstateBrand: "SUMAITE不動産",
   address: "長野県須坂市",
-  siteUrl: "https://horiuchi-kenzai.co.jp", // 仮URL — 本番に差し替え
-  contactEmail: "recruit@horiuchi-kenzai.co.jp", // 仮 — 本番に差し替え
+  siteUrl: "https://www.horiuchikenzai.co.jp",
+  contactEmail: "recruit@horiuchikenzai.co.jp", // 仮 — 本番に差し替え
   contactPhone: "026-XXX-XXXX", // 仮 — 本番に差し替え
   socialLinks: {
     instagram: "https://www.instagram.com/horiken71411/",
@@ -313,7 +313,7 @@ export const CTA = {
     {
       type: "email" as const,
       label: "メールで問い合わせ",
-      value: "recruit@horiuchi-kenzai.co.jp", // 仮
+      value: "recruit@horiuchikenzai.co.jp", // 仮
       description: "直接メールを送りたい方はこちら。",
     },
     {
@@ -340,7 +340,7 @@ export const FOOTER = {
     },
   ],
   links: [
-    { label: "コーポレートサイト", href: "https://horiuchi-kenzai.co.jp" }, // 仮
+    { label: "コーポレートサイト", href: "https://www.horiuchikenzai.co.jp" },
     { label: "SUMAITE不動産", href: "#" }, // 仮
     { label: "Instagram", href: "https://www.instagram.com/horiken71411/" },
   ],
