@@ -30,17 +30,15 @@ export default function Header() {
       }`}
     >
       <div className={`mx-auto max-w-6xl flex items-center justify-between px-4 transition-all duration-300 ${scrolled ? "h-14" : "h-16"}`}>
-        <a href="#" className="group flex items-center gap-2">
-          <span className="flex flex-col gap-0.5 group-hover:gap-1 transition-all" aria-hidden="true">
-            <span className="block w-5 h-0.5 bg-accent rounded-full" />
-            <span className="block w-4 h-0.5 bg-accent rounded-full" />
-            <span className="block w-3 h-0.5 bg-accent rounded-full" />
-          </span>
-          <span className="font-bold text-primary text-sm md:text-base">
-            {COMPANY.nameShort}
-            <span className="text-xs text-text-sub ml-1 hidden sm:inline">
-              採用情報
-            </span>
+        <a href="#" className="flex items-center gap-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo.svg"
+            alt={COMPANY.nameShort}
+            className="h-8 md:h-10 w-auto"
+          />
+          <span className="text-xs text-text-sub hidden sm:inline">
+            有限会社堀内建材採用情報
           </span>
         </a>
 

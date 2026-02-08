@@ -65,7 +65,7 @@ export default function Work() {
           <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-bg-pale border border-sub/30 lg:sticky lg:top-24">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/placeholder/work.svg"
+              src="/images/work.jpg"
               alt="施工現場の様子（後日差し替え）"
               className="w-full h-full object-cover"
               loading="lazy"

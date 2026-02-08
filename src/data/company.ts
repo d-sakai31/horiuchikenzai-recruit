@@ -21,12 +21,12 @@ export const COMPANY = {
 // Hero
 // --------------------------------------------------
 export const HERO = {
-  catchCopy: "新社屋、新事業、\n若手が動かす\n建材会社。",
+  catchCopy: "建材・リフォーム・不動産\n若手が動かす\n須坂市のオンリーワン企業",
   subCopy:
-    "年間300か所以上の窓・玄関を手がけ、不動産事業も立ち上がった堀内建材。\n今、この成長フェーズを一緒につくる人を探しています。",
+    "住宅建材の卸売から始まり、現在は年間300ヶ所以上の窓・玄関リフォーム、\nそして地元須坂市の不動産仲介も行っています。\nこの成長フェーズを一緒につくる仲間を探しています。",
   ctaLabel: "お問い合わせ",
   ctaSubText: "応募前の相談だけでもOK",
-  bgImage: "/placeholder/hero.svg",
+  bgImage: "/images/hero.jpg",
 } as const;
 
 // --------------------------------------------------
@@ -35,7 +35,7 @@ export const HERO = {
 export const PROOF = {
   heading: "数字で見る堀内建材",
   subHeading: "地域密着で積み重ねてきた、施工実績と信頼。",
-  image: "/placeholder/evidence.svg",
+  image: "/images/proof.jpg",
 } as const;
 
 export interface ProofCard {
@@ -93,9 +93,14 @@ export const WORK = {
       description:
         "工務店・ビルダー向けにサッシ・建材を卸す法人営業です。段取り力と納期管理が鍵になります。",
     },
+    {
+      title: "不動産アドバイザー",
+      description:
+        "SUMAITE不動産にて、地元須坂市の不動産を中心にお客様へご紹介するアドバイザー業務を行います。",
+    },
   ],
   dailySchedule: {
-    title: "ある日の流れ（例）",
+    title: "当社業務の流れ（例）",
     note: "※案件や時期により変動します。あくまで一例としてお読みください。",
     items: [
       { time: "8:00", task: "出社・朝礼。当日の現場確認と段取り共有" },
@@ -115,7 +120,7 @@ export const CULTURE = {
   heading: "チームの空気",
   subHeading: "「仲がいい」を言葉ではなく、日常で。",
   snsText: "日常の様子は SNS でも発信しています",
-  image: "/placeholder/culture.svg",
+  image: "/images/culture.jpg",
   points: [
     {
       title: "朝礼は雑談から始まる",
@@ -141,7 +146,7 @@ export const CULTURE = {
 export const GROWTH = {
   heading: "「今」入る意味がある理由",
   subHeading: "完成した組織に入るのと、つくる側に回るのは全く違う。",
-  image: "/placeholder/building.svg",
+  image: "/images/growth.svg",
   points: [
     {
       title: "新社屋が完成。物理的にも「これから」の会社",
@@ -364,5 +369,5 @@ export const SEO = {
   title: "採用情報｜有限会社堀内建材｜長野県須坂市の建材・建築・不動産",
   description:
     "長野県須坂市の堀内建材は、年間300か所以上の窓・玄関取付と100件以上のエクステリア工事を手がける建材会社。新社屋完成・不動産事業開始の成長フェーズで、一緒に働く仲間を募集しています。",
-  ogImage: "/placeholder/og-image.svg",
+  ogImage: "/images/og-image.svg",
 } as const;

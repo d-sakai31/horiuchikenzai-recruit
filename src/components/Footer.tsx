@@ -8,13 +8,13 @@ export default function Footer() {
     <footer className="bg-bg-pale border-t border-sub/30 py-14 relative">
       <div className="mx-auto max-w-6xl px-4">
         {/* Logo area */}
-        <div className="flex items-center gap-2 mb-8">
-          <span className="group flex flex-col gap-0.5 hover:gap-1 transition-all cursor-default" aria-hidden="true">
-            <span className="block w-5 h-0.5 bg-accent rounded-full" />
-            <span className="block w-4 h-0.5 bg-accent rounded-full" />
-            <span className="block w-3 h-0.5 bg-accent rounded-full" />
-          </span>
-          <span className="font-bold text-lg text-primary">{COMPANY.name}</span>
+        <div className="flex items-center gap-3 mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo.svg"
+            alt={COMPANY.name}
+            className="h-14 w-auto"
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -1,0 +1,7 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#002D46"/>
+  <text x="50%" y="38%" text-anchor="middle" fill="white" font-size="44" font-family="sans-serif" font-weight="bold">OG IMAGE</text>
+  <text x="50%" y="52%" text-anchor="middle" fill="#A8D6ED" font-size="22" font-family="sans-serif">SNSシェア時のサムネイル画像</text>
+  <text x="50%" y="62%" text-anchor="middle" fill="#999" font-size="18" font-family="sans-serif">推奨: 1200×630px (OGP標準)</text>
+  <text x="50%" y="70%" text-anchor="middle" fill="#666" font-size="16" font-family="sans-serif">例: ロゴ+キャッチコピー+社屋写真のコンポジット</text>
+</svg>

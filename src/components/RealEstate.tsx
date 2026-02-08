@@ -28,7 +28,7 @@ export default function RealEstate() {
         <div className="relative z-10 mt-10 rounded-2xl overflow-hidden aspect-[21/9]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/placeholder/realestate.svg"
+            src="/images/realestate.jpg"
             alt="SUMAITE不動産（後日差し替え）"
             className="w-full h-full object-cover"
             loading="lazy"
