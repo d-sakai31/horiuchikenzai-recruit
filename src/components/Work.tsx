@@ -18,13 +18,13 @@ export default function Work() {
               {WORK.heading}
             </h2>
           </div>
-          <p className="text-text-sub text-sm md:text-base max-w-sm md:text-right md:pb-1">
+          <p className="text-text-sub text-sm md:text-base max-w-xs md:max-w-sm md:text-right md:pb-1 whitespace-pre-line">
             {WORK.subHeading}
           </p>
         </div>
 
         {/* Project cards: unified 2-column grid */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {WORK.projects.map((project) => (
             <div
               key={project.title}
@@ -44,18 +44,18 @@ export default function Work() {
         {/* Daily schedule + Work scene photo: 2-column */}
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <div>
-            <h3 className="text-lg font-bold text-primary">
+            <h3 className="text-xl md:text-2xl font-bold text-primary">
               {WORK.dailySchedule.title}
             </h3>
-            <p className="mt-1 text-xs text-text-sub">
+            <p className="mt-1 text-sm text-text-sub">
               {WORK.dailySchedule.note}
             </p>
-            <div className="mt-8 relative pl-8 border-l-2 border-sub/30 space-y-8">
+            <div className="mt-6 md:mt-8 relative pl-6 md:pl-8 border-l-2 border-sub/30 space-y-6 md:space-y-8">
               {WORK.dailySchedule.items.map((item) => (
                 <div key={item.time} className="relative">
                   <span className="absolute -left-[calc(0.5rem+1px)] top-0.5 w-3 h-3 rounded-full bg-accent border-2 border-white" aria-hidden="true" />
-                  <span className="text-sm font-bold text-primary tabular-nums">{item.time}</span>
-                  <p className="text-sm text-text-sub mt-0.5">{item.task}</p>
+                  <span className="text-base font-bold text-primary tabular-nums">{item.time}</span>
+                  <p className="text-base text-text-sub mt-0.5">{item.task}</p>
                 </div>
               ))}
             </div>

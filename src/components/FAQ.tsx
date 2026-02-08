@@ -62,7 +62,7 @@ export default function FAQ() {
         </div>
 
         {/* FAQ items with left accent border */}
-        <div className="mt-10 border-l-2 border-accent pl-6 md:pl-8">
+        <div className="mt-10 border-l-2 border-accent pl-4 md:pl-6 lg:pl-8">
           {FAQ_ITEMS.map((item) => (
             <FAQAccordionItem key={item.question} item={item} />
           ))}

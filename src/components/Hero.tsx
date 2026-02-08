@@ -23,11 +23,11 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent" />
 
         <div className="absolute inset-0 flex items-end">
-          <div className="w-full pb-20 md:pb-28 px-4">
+          <div className="w-full pb-12 md:pb-20 lg:pb-28 px-4">
             <div className="mx-auto max-w-6xl">
               <h1 className="text-primary max-w-3xl">
                 {/* 1行目: カテゴリラベル */}
-                <span className="block text-2xl md:text-4xl font-bold tracking-[0.15em] text-primary/70 mb-3">
+                <span className="block text-lg sm:text-2xl md:text-4xl font-bold tracking-[0.15em] text-primary/70 mb-2 md:mb-3">
                   {lines[0]}
                 </span>
                 {/* 2行目以降: メインコピー */}
@@ -47,20 +47,20 @@ export default function Hero() {
                   </span>
                 ))}
               </h1>
-              <p className="mt-5 text-base md:text-lg leading-relaxed text-text-sub whitespace-pre-line max-w-2xl">
+              <p className="mt-4 md:mt-5 text-sm md:text-base lg:text-lg leading-relaxed text-primary whitespace-pre-line max-w-2xl">
                 {HERO.subCopy}
               </p>
               <div className="mt-8 flex flex-wrap gap-4 items-center">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold text-lg md:text-xl px-10 py-4 rounded-full transition-all hover:scale-[1.03] shadow-md"
+                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold text-base md:text-lg lg:text-xl px-6 py-3 md:px-10 md:py-4 rounded-full transition-all hover:scale-[1.03] shadow-md"
                 >
                   {HERO.ctaLabel}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
-                <span className="text-sm text-text-sub">
+                <span className="text-sm text-primary">
                   {HERO.ctaSubText}
                 </span>
               </div>
@@ -70,7 +70,7 @@ export default function Hero() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" aria-hidden="true">
-          <span className="text-[10px] tracking-[0.3em] text-text-sub/60 uppercase font-medium">Scroll</span>
+          <span className="text-xs tracking-[0.3em] text-text-sub/60 uppercase font-medium">Scroll</span>
           <span className="w-px h-10 bg-text-sub/20 relative overflow-hidden">
             <span className="absolute inset-x-0 top-0 h-1/2 bg-accent animate-pulse" />
           </span>

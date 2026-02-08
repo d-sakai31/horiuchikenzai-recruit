@@ -12,11 +12,11 @@ interface TrackCardProps {
 function TrackCard({ heading, subHeading, points, note, accentColor }: TrackCardProps) {
   return (
     <div className="bg-white rounded-xl border border-sub/30 overflow-hidden shadow-sm">
-      <div className={`${accentColor} px-8 py-5`}>
-        <h3 className="text-xl font-bold text-white">{heading}</h3>
+      <div className={`${accentColor} px-5 py-4 md:px-8 md:py-5`}>
+        <h3 className="text-lg md:text-xl font-bold text-white">{heading}</h3>
         <p className="text-sm text-white/70 mt-1">{subHeading}</p>
       </div>
-      <div className="p-8 space-y-6">
+      <div className="p-5 md:p-8 space-y-5 md:space-y-6">
         {points.map((point, i) => (
           <div key={point.title} className="flex items-start gap-4">
             <span className="text-2xl font-black text-sub/30 leading-none shrink-0 w-8" aria-hidden="true">
@@ -32,7 +32,7 @@ function TrackCard({ heading, subHeading, points, note, accentColor }: TrackCard
         ))}
       </div>
       {note && (
-        <p className="text-xs text-text-sub border-t border-sub/20 px-8 py-4">
+        <p className="text-xs text-text-sub border-t border-sub/20 px-5 py-3 md:px-8 md:py-4">
           {note}
         </p>
       )}
@@ -46,7 +46,7 @@ export default function Tracks() {
     <section
      
       id="tracks"
-      className="bg-white py-24 md:py-36"
+      className="bg-white py-16 md:py-24 lg:py-36"
     >
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
@@ -80,7 +80,7 @@ export default function Tracks() {
         <div className="mt-14 text-center">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold text-lg px-10 py-4 rounded-full transition-all group hover:scale-[1.02]"
+            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold text-base md:text-lg px-6 py-3 md:px-10 md:py-4 rounded-full transition-all group hover:scale-[1.02]"
           >
             {TRACKS.ctaLabel}
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

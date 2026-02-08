@@ -38,7 +38,7 @@ export default function Header() {
             className="h-8 md:h-10 w-auto"
           />
           <span className="text-xs text-text-sub hidden sm:inline">
-            有限会社堀内建材採用情報
+            有限会社堀内建材　採用情報
           </span>
         </a>
 
@@ -65,7 +65,7 @@ export default function Header() {
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href="#contact"
-            className="bg-accent hover:bg-accent-light text-primary-dark text-xs font-bold px-4 py-1.5 rounded-full transition-colors"
+            className="bg-accent hover:bg-accent-light text-primary-dark text-sm font-bold px-4 py-1.5 rounded-full transition-colors"
           >
             お問い合わせ
           </a>

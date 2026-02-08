@@ -25,7 +25,7 @@ export default function RealEstate() {
         </div>
 
         {/* Panoramic photo */}
-        <div className="relative z-10 mt-10 rounded-2xl overflow-hidden aspect-[21/9]">
+        <div className="relative z-10 mt-10 rounded-2xl overflow-hidden aspect-video md:aspect-[21/9]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/realestate.jpg"
@@ -36,8 +36,8 @@ export default function RealEstate() {
         </div>
 
         {/* Description + Points: 2-column below */}
-        <div className="relative z-10 mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-          <p className="text-base leading-relaxed text-text-sub">
+        <div className="relative z-10 mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-6">
+          <p className="text-sm md:text-base leading-relaxed text-text-sub">
             {REAL_ESTATE.description}
           </p>
           <ul className="space-y-4">

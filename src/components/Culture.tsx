@@ -23,7 +23,7 @@ export default function Culture() {
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
           <div className="absolute bottom-0 left-0 p-6 md:p-10">
             <span className="text-xs font-bold tracking-[0.2em] uppercase text-accent">Culture</span>
-            <h2 className="mt-2 text-2xl md:text-4xl font-bold text-white">
+            <h2 className="mt-2 text-xl sm:text-2xl md:text-4xl font-bold text-white">
               {CULTURE.heading}
             </h2>
             <p className="mt-2 text-sm text-white/70">
@@ -33,10 +33,10 @@ export default function Culture() {
         </div>
 
         {/* Points: 3-column open layout */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {CULTURE.points.map((point, i) => (
             <div key={point.title} className="group">
-              <span className="text-6xl font-black text-sub/20 leading-none" aria-hidden="true">
+              <span className="text-4xl md:text-6xl font-black text-sub/20 leading-none" aria-hidden="true">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-2 text-lg font-bold text-primary group-hover:text-primary-light transition-colors">

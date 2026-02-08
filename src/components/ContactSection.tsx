@@ -18,7 +18,7 @@ export default function ContactSection() {
     <section
      
       id="contact"
-      className="bg-white pt-20 md:pt-28 pb-24 md:pb-36"
+      className="bg-white pt-16 md:pt-20 lg:pt-28 pb-16 md:pb-24 lg:pb-36"
     >
       <div className="mx-auto max-w-4xl px-4">
         {/* Header: display centered */}
@@ -37,7 +37,7 @@ export default function ContactSection() {
             <h3 className="text-lg font-bold text-primary mb-1">
               Webフォームで問い合わせ
             </h3>
-            <p className="text-xs text-text-sub mb-6">
+            <p className="text-sm text-text-sub mb-6">
               24時間受付。2営業日以内にご連絡します。
             </p>
 
@@ -119,7 +119,7 @@ export default function ContactSection() {
               </span>
               <div>
                 <h3 className="font-bold text-primary text-sm">メールで直接問い合わせ</h3>
-                <p className="text-xs text-text-sub mt-0.5">直接メールを送りたい方はこちら。</p>
+                <p className="text-sm text-text-sub mt-0.5">直接メールを送りたい方はこちら。</p>
                 <a
                   href={`mailto:${COMPANY.contactEmail}`}
                   className="text-primary-light hover:text-primary hover:underline text-sm mt-1 inline-block break-all"
@@ -138,7 +138,7 @@ export default function ContactSection() {
               </span>
               <div>
                 <h3 className="font-bold text-primary text-sm">電話で問い合わせ</h3>
-                <p className="text-xs text-text-sub mt-0.5">平日 9:00〜17:00（担当：採用窓口）</p>
+                <p className="text-sm text-text-sub mt-0.5">平日 9:00〜17:00（担当：採用窓口）</p>
                 <a
                   href={`tel:${COMPANY.contactPhone.replace(/-/g, "")}`}
                   className="text-primary hover:underline text-lg font-bold mt-1 inline-block"

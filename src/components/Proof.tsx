@@ -18,7 +18,7 @@ export default function Proof() {
     <section
      
       id="proof"
-      className="bg-white pt-24 md:pt-36 pb-16 md:pb-24"
+      className="bg-white pt-16 md:pt-24 lg:pt-36 pb-12 md:pb-16 lg:pb-24"
     >
       <div className="mx-auto max-w-6xl px-4">
         {/* Header: left-aligned with bg watermark */}
@@ -48,13 +48,13 @@ export default function Proof() {
         </div>
 
         {/* Cards: 3-column */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="mt-10 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
           {PROOF_CARDS.map((card, i) => (
             <div
               key={card.label}
               className={`rounded-2xl p-6 text-center ${cardStyles[i]}`}
             >
-              <div className={`text-5xl md:text-6xl font-extrabold leading-none ${numberColors[i]}`}>
+              <div className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-none ${numberColors[i]}`}>
                 {card.number}
               </div>
               <div className="mx-auto mt-2 w-8 h-0.5 bg-accent rounded-full" aria-hidden="true" />

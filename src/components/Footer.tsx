@@ -13,11 +13,11 @@ export default function Footer() {
           <img
             src="/images/logo.svg"
             alt={COMPANY.name}
-            className="h-14 w-auto"
+            className="h-10 md:h-14 w-auto"
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* Company info */}
           <dl className="space-y-2">
             {FOOTER.companyInfo.map((item) => (

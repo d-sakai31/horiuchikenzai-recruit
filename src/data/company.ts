@@ -71,7 +71,7 @@ export const PROOF_CARDS: ProofCard[] = [
 // --------------------------------------------------
 export const WORK = {
   heading: "どんな仕事をするのか",
-  subHeading: "「窓を売る」だけじゃない。提案から施工、補助金申請まで一気通貫。",
+  subHeading: "「窓を売る」だけじゃない。\n提案から施工、補助金申請まで一気通貫。",
   projects: [
     {
       title: "窓・玄関リフォーム",
