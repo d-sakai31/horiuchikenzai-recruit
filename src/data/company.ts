@@ -104,9 +104,9 @@ export const WORK = {
     note: "※案件や時期により変動します。あくまで一例としてお読みください。",
     items: [
       { time: "8:00", task: "出社・朝礼。当日の現場確認と段取り共有" },
-      { time: "8:30", task: "現場へ出発。窓の取付工事（午前1件）" },
+      { time: "8:30", task: "工事の立ち合い・現地調査のため、出発（午前2件）" },
       { time: "12:00", task: "昼休憩" },
-      { time: "13:00", task: "午後の現場（エクステリア工事の立会い等）" },
+      { time: "13:00", task: "午後の現場（リフォーム工事の立会い・調査等）" },
       { time: "15:30", task: "帰社。見積作成・発注業務・翌日の段取り" },
       { time: "17:30", task: "退社" },
     ],
@@ -147,6 +147,11 @@ export const GROWTH = {
   heading: "「今」入る意味がある理由",
   subHeading: "完成した組織に入るのと、つくる側に回るのは全く違う。",
   image: "/images/growth.svg",
+  buildingPhotos: [
+    { src: "/images/building-exterior.jpg", alt: "堀内建材 新社屋 外観", caption: "新社屋 外観" },
+    { src: "/images/building-office.jpg", alt: "明るく開放的な事務所フロア", caption: "事務所" },
+    { src: "/images/building-meeting.jpg", alt: "来客対応のための応接室", caption: "応接室" },
+  ],
   points: [
     {
       title: "新社屋が完成。物理的にも「これから」の会社",

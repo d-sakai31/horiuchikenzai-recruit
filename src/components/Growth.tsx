@@ -21,6 +21,37 @@ export default function Growth() {
           </h2>
         </div>
 
+        {/* 新社屋 写真ギャラリー */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <figure className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-primary/5">
+            <img
+              src={GROWTH.buildingPhotos[0].src}
+              alt={GROWTH.buildingPhotos[0].alt}
+              loading="lazy"
+              className="w-full h-64 md:h-full object-cover"
+            />
+            <figcaption className="absolute bottom-3 left-3 bg-white/85 backdrop-blur px-3 py-1 rounded-md text-xs font-bold text-primary">
+              {GROWTH.buildingPhotos[0].caption}
+            </figcaption>
+          </figure>
+          {GROWTH.buildingPhotos.slice(1).map((photo) => (
+            <figure
+              key={photo.src}
+              className="relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-primary/5"
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                className="w-full h-44 md:h-40 object-cover"
+              />
+              <figcaption className="absolute bottom-2 left-2 bg-white/85 backdrop-blur px-2.5 py-0.5 rounded-md text-xs font-bold text-primary">
+                {photo.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
         {/* Content */}
         <div className="mt-12">
           <div className="space-y-6">
